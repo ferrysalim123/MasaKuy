@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MasaKuy</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="login">Login</string>
+    <string name="Back">Back</string>
+    <string name="signup">Sign Up</string>
+    <string name="fullname">Full name</string>
+    <string name="username">Username</string>
+    <string name="NoTelp">Phone Number</string>
+    <string name="konfirmpass">Confirm Password</string>
+    <string name="resep">Resep</string>
+    <string name="cancel">Cancel</string>
+    <string name="alat_dan_bahan">Alat dan Bahan</string>
+    <string name="cara_memasak">Cara Memasak</string>
+    <string name="judul_resep">Judul Resep</string>
+    <string name="deskripsi">Deskripsi</string>
+</resources>

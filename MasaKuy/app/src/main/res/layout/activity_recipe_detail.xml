@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    tools:context=".RecipeDetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivRecipePict"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="centerCrop"
+            android:background="@color/grey"
+            android:src="@drawable/photo_smaller"
+            app:layout_constraintBottom_toTopOf="@id/etRecipeName"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/etRecipeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recipe Name"
+            android:fontFamily="@font/roboto_condensed_bold"
+            android:textColor="@color/darkblue"
+            android:textSize="25sp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toTopOf="@id/etDescription"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivRecipePict" />
+
+        <TextView
+            android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="15px"
+            android:fontFamily="@font/roboto_condensed_regular"
+            android:text="Description"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@id/ingredients"
+            app:layout_constraintTop_toBottomOf="@id/etRecipeName"
+            tools:layout_editor_absoluteX="0dp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/ingredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="15px"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/roboto_condensed_bold"
+            android:text="Alat dan Bahan"
+            android:textSize="20sp"
+            android:textColor="@color/darkblue"
+            app:layout_constraintBottom_toTopOf="@id/ingredients"
+            app:layout_constraintTop_toBottomOf="@id/etDescription"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/etIngredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/roboto_condensed_regular"
+            android:padding="15px"
+            android:text="Ingredients"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/steps"
+            app:layout_constraintTop_toBottomOf="@+id/ingredients"
+            tools:layout_editor_absoluteX="0dp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/steps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:padding="15px"
+            android:fontFamily="@font/roboto_condensed_bold"
+            android:text="Cara Memasak"
+            android:textColor="@color/darkblue"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/etSteps"
+            app:layout_constraintTop_toBottomOf="@id/etIngredients"
+            tools:layout_editor_absoluteX="0dp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/etSteps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/roboto_condensed_regular"
+            android:background="@drawable/radius_edit_text_grey"
+            android:padding="15px"
+            android:text="How To Cook"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/steps"
+            app:layout_constraintTop_toBottomOf="@+id/comments"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:padding="15px"
+            android:fontFamily="@font/roboto_condensed_bold"
+            android:text="Komentar"
+            android:textColor="@color/darkblue"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/etSteps"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnComment"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/radius_button"
+            android:fontFamily="@font/roboto_condensed_bold"
+            android:padding="20px"
+            android:text="Beri Komentar"
+            android:textColor="@color/cream"
+            app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/comments"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_margin="10dp"
+            android:padding="15px"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnComment"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_delete"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="50dp"
+        android:padding="20px"
+        android:background="@drawable/radius_button2"
+        android:text="Delete Post"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraint1"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

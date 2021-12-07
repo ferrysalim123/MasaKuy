@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30dp"
+        android:background="@color/white"
+        tools:context=".AddRecipe">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/custom_toolbar"/>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/logo_blue" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="30dp"
+                android:text="Post Recipe"
+                android:textColor="@color/darkblue"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/recipePict"
+                android:layout_width="320dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:adjustViewBounds="true"
+                android:background="@drawable/border"
+                android:scaleType="centerCrop"
+                android:src="@drawable/add_photo_smaller"
+                android:clickable="true"/>
+
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_condensed_bold"
+                android:text="@string/judul_resep"
+                android:textColor="@color/darkblue"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/recipeName"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:layout_gravity="center_horizontal"
+                android:hint="Isi judul resep disini..."
+                android:textColorHint="@color/darkblue"
+                android:padding="15dp"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_condensed_bold"
+                android:text="@string/deskripsi"
+                android:textColor="@color/darkblue"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="320dp"
+                android:layout_height="80dp"
+                android:background="@drawable/border"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:hint="Isi deskripsi resep disini..."
+                android:textColorHint="@color/darkblue"
+                android:padding="16dp"/>
+
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_condensed_bold"
+                android:text="@string/alat_dan_bahan"
+                android:textColor="@color/darkblue"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/ingredients"
+                android:layout_width="320dp"
+                android:layout_height="100dp"
+                android:background="@drawable/border"
+                android:layout_gravity="center_horizontal"
+                android:hint="Isi alat dan bahan resep disini..."
+                android:textColorHint="@color/darkblue"
+                android:padding="16dp"/>
+
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_condensed_bold"
+                android:text="@string/cara_memasak"
+                android:textColor="@color/darkblue"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/steps"
+                android:layout_width="320dp"
+                android:layout_height="100dp"
+                android:background="@drawable/border"
+                android:layout_gravity="center_horizontal"
+                android:hint="Isi cara memasak resep disini..."
+                android:textColorHint="@color/darkblue"
+                android:padding="16dp"/>
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonPost"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/radius_button"
+            android:text="Post"
+            android:textColor="@color/cream"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonBack2"
+            android:textColor="@color/darkblue"
+            android:background="@drawable/radius_button2"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/Back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonPost"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30dp"
+        tools:context=".SignUp">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="350dp"
+            android:layout_height="500dp"
+            android:layout_marginTop="36dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/logo_blue" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/roboto_condensed_bold"
+                android:text="@string/signup"
+                android:textColor="@color/darkblue"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_condensed_bold"
+                android:text="@string/username"
+                android:textColor="@color/darkblue" />
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/radius_edit_text_peach"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="10dp"
+                app:boxBackgroundColor="@color/cream" />
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_condensed_bold"
+                android:text="@string/email"
+                android:textColor="@color/darkblue" />
+
+            <EditText
+                android:id="@+id/Email"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/radius_edit_text_peach"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="10dp"
+                app:boxBackgroundColor="@color/cream" />
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_condensed_bold"
+                android:text="@string/NoTelp"
+                android:textColor="@color/darkblue" />
+
+            <EditText
+                android:id="@+id/NoTelp"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/radius_edit_text_peach"
+                android:inputType="phone"
+                android:paddingLeft="10dp"
+                app:boxBackgroundColor="@color/cream" />
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_condensed_bold"
+                android:text="@string/password"
+                android:textColor="@color/darkblue" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/radius_edit_text_peach"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                app:boxBackgroundColor="@color/cream" />
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_condensed_bold"
+                android:text="@string/konfirmpass"
+                android:textColor="@color/darkblue" />
+
+            <EditText
+                android:id="@+id/konfirmPass"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="10dp"
+                android:background="@drawable/radius_edit_text_peach"
+                android:inputType="textPassword"
+                app:boxBackgroundColor="@color/cream"/>
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutKonfirmasiPassword" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonSignUp"
+            android:textColor="@color/cream"
+            android:background="@drawable/radius_button"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/signup"
+            android:fontFamily="@font/roboto_condensed_bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonBack2"
+            android:textColor="@color/darkblue"
+            android:fontFamily="@font/roboto_condensed_bold"
+            android:background="@drawable/radius_button2"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonSignUp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
